@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/zrzut_ekranu_2023_09_22_o_11_57_06_fotor_20230922122017" />
 
     <ImageButton
-        android:id="@+id/img5"
+        android:id="@+id/img4"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:scaleType="fitXY"
@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/_b4eed0cc051e602a568ce0c" />
 
     <ImageButton
-        android:id="@+id/img4"
+        android:id="@+id/img3"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:scaleType="fitXY"
@@ -57,7 +57,7 @@
         app:srcCompat="@drawable/pngtree_isolated_cat_on_white_background_png_image_7094927" />
 
     <ImageButton
-        android:id="@+id/img2"
+        android:id="@+id/img1"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:scaleType="fitXY"
@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/_80b585b2edbce24c47b27f8" />
 
     <ImageButton
-        android:id="@+id/img3"
+        android:id="@+id/img2"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:scaleType="fitXY"
@@ -83,7 +83,7 @@
         app:srcCompat="@drawable/_845e614fb0b0755fa99d7e8" />
 
     <ImageButton
-        android:id="@+id/img1"
+        android:id="@+id/img0"
         android:layout_width="72dp"
         android:layout_height="49dp"
         android:scaleType="fitXY"
