@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         var INF = 9999999
         var a = arrayOf(findViewById<ImageButton>(R.id.img0),findViewById<ImageButton>(R.id.img1),findViewById<ImageButton>(R.id.img2), findViewById<ImageButton>(R.id.img3),findViewById<ImageButton>(R.id.img4))
         var b = arrayListOf<ImageButton>()
+        var tempTextId = ""
+        var tempId = 0
         var txt = findViewById<TextView>(R.id.textView)
         var tablica = Array(5) {Array (5){INF} }
         for(i in 0..tablica.size -1){
@@ -41,8 +43,6 @@ class MainActivity : AppCompatActivity() {
                     b = arrayListOf()
                     b.add(elements)
                 }
-                txt.text = Arrays.deepToString(arrayOf(b))
-                /*dodaj system blokowania dwa razy tego samego przycisku */
                 if(b.size<=1){
                     findViewById<TextView>(R.id.txtBtn1).text= resources.getResourceEntryName(elements.id).removePrefix("img")
                     findViewById<TextView>(R.id.txtBtn2).text = ""
@@ -56,9 +56,10 @@ class MainActivity : AppCompatActivity() {
                     var inputText = EditText(this)
                     alert.setView(inputText)
                     alert.setPositiveButton("Confirm", DialogInterface.OnClickListener { dialogInterface, i ->
-                        findViewById<TextView>(R.id.textView).text = inputText.text
                         tablica[resources.getResourceEntryName(b[0].id).removePrefix("img").toInt()][resources.getResourceEntryName(b[1].id).removePrefix("img").toInt()] = inputText.text.toString().toInt()
-                        txt.text = Arrays.deepToString(tablica)
+                        tempTextId = "t"+resources.getResourceEntryName(b[0].id).removePrefix("img")+"_"+resources.getResourceEntryName(b[1].id).removePrefix("img")
+                        tempId = resources.getIdentifier(tempTextId, "id", packageName)
+                        findViewById<TextView>(tempId).text = inputText.text.toString()
                         dialogInterface.cancel()
                     })
                     alert.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialogInterface, i ->
