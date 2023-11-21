@@ -200,7 +200,7 @@
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.134" />
 
     <TextView
         android:id="@+id/t2_4"
@@ -213,7 +213,7 @@
         app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.24" />
 
     <TextView
         android:id="@+id/t4_2"
@@ -226,7 +226,7 @@
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintVertical_bias="0.288" />
 
     <TextView
         android:id="@+id/t3_0"
@@ -327,10 +327,10 @@
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:id="@+id/t4_3"

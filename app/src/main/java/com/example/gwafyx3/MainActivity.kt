@@ -3,6 +3,7 @@ package com.example.gwafyx3
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -17,9 +18,10 @@ class MainActivity : AppCompatActivity() {
         var INF = 9999999
         var a = arrayOf(findViewById<ImageButton>(R.id.img0),findViewById<ImageButton>(R.id.img1),findViewById<ImageButton>(R.id.img2), findViewById<ImageButton>(R.id.img3),findViewById<ImageButton>(R.id.img4))
         var b = arrayListOf<ImageButton>()
-        var tempTextId = ""
-        var tempId = 0
-        var txt = findViewById<TextView>(R.id.textView)
+        var l1: Int
+        var l2: Int
+        var tempTextId: String
+        var tempId: Int
         var tablica = Array(5) {Array (5){INF} }
         for(i in 0..tablica.size -1){
             tablica[i][i] = 0
@@ -71,6 +73,26 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        findViewById<Button>(R.id.btnAction).setOnClickListener {
+            if(findViewById<EditText>(R.id.num1).text.toString() !="" && findViewById<EditText>(R.id.num2).text.toString() != ""){
+                l1 = findViewById<EditText>(R.id.num1).text.toString().toInt()
+                l2 = findViewById<EditText>(R.id.num2).text.toString().toInt()
 
+                findViewById<TextView>(R.id.textView).text = FW(tablica,l1,l2).toString()
+            }
+
+        }
+
+
+    }
+    fun FW(array: Array<Array<Int>>, from:Int, to:Int): Int{
+        for(k in 0 until  array.size){
+            for(u in 0 until array.size){
+                for(v in 0 until array.size){
+                    array[u][v] = minOf(array[u][v], array[u][k] + array[k][v])
+                }
+            }
+        }
+        return array[from][to]
     }
 }
